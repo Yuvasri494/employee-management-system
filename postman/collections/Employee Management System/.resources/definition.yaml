@@ -1,0 +1,12 @@
+$kind: collection
+description: ""
+variables:
+  baseUrl: http://localhost:5000/api
+  token: ""
+  employeeId: ""
+auth:
+  - id: d75088ed-b418-4a0f-86ba-341333f65ad7
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{token}}"

@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{baseUrl}}/employees"
+method: GET
+queryParams:
+  - key: search
+    value: rav
+    disabled: true
+order: 4000
