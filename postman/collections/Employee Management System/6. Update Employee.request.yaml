@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/employees/{{employeeId}}"
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "name": "Ravi Kumar",
+      "email": "ravi@test.com",
+      "phone": "9876543210",
+      "department": "IT",
+      "designation": "Senior Developer"
+    }
+order: 6000

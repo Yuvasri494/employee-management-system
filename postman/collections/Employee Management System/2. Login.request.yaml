@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{baseUrl}}/auth/login"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "email": "yuva@test.com",
+      "password": "123456"
+    }
+auth:
+  type: noauth
+scripts:
+  - type: afterResponse
+    code: |-
+      const res = pm.response.json();
+      if (res.token) {
+        pm.collectionVariables.set('token', res.token);
+      }
+    language: text/javascript
+order: 2000
